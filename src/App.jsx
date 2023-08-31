@@ -41,7 +41,7 @@ function App() {
     let promises=[];
     let endpoints=["tv","movie"]
     let allGenres={}; 
-
+  
     endpoints.forEach((url)=>{
       promises.push(fetchDataFromApi(`/genre/${url}/list`))
     })
@@ -49,7 +49,7 @@ function App() {
     const data =await Promise.all(promises)
     console.log(data);
     data.map(({genres})=>{
-      return genres.map((item)=>(allGenres[item.id ]=item))
+      return genres.map((item)=>(allGenres[item.id]=item))
     })
     dispatch(getGeneres(allGenres))
   }
@@ -62,7 +62,7 @@ function App() {
         <Route path='/:mediaType/:id' element={<Details />} />
         <Route path='/search/:query' element={<SearchResult />} />
         <Route path='/explore/:mediaType' element={<Explore />} />
-        <Route path='*' element={<PageNotFound />} />
+        <Route path='*' element={<PageNotFound/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
