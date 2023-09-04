@@ -17,7 +17,7 @@ export const PlayIcon = () => {
                 fill="none"
                 strokeWidth="7"
                 strokeLinecap="round"
-                strokeLinejoin="round"
+                strokeLinejoin="round"              
                 strokeMiterlimit="10"
                 points="73.5,62.5 148.5,105.8 73.5,149.1 "
             ></polygon>
